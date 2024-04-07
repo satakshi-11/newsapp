@@ -2,135 +2,20 @@ import React, { Component } from 'react'
 import NewsItem from './NewsItem'
 
 export class News extends Component {
-  articles= [
-    {
-      "source": { "id": "cnn-es", "name": "CNN Spanish" },
-      "author": "Ángela Reyes Haczek",
-      "title": "Peleas con mandatarios regionales y acercamiento a EE.UU. e Israel, ¿hacia dónde va la diplomacia de Milei?",
-      "description": "Bastó con un adelanto de una entrevista de CNN con el presidente de Argentina, Javier Milei, que se emitirá este domingo, para que sus dichos explosivos crearan un conflicto diplomático con Colombia, que aún resta saber cómo terminará de dirimirse, y un fuert…",
-      "url": "https://cnnespanol.cnn.com/2024/03/30/milei-diplomacia-peleas-latinoamerica-orix/",
-      "urlToImage": "https://cnnespanol.cnn.com/wp-content/uploads/2024/03/GettyImages-1792547668-e1711793390489.jpg?quality=100&strip=info",
-      "publishedAt": "2024-03-30T10:14:45Z",
-      "content": "Cruce de opiniones entre Milei, Petro y AMLO genera tensión entre presidentes 11:58\r\n(CNN Español) -- Bastó con un adelanto de una entrevista de CNN con el presidente de Argentina, Javier Milei, que … [+11269 chars]"
-    },
-    {
-      "source": { "id": "la-repubblica", "name": "La Repubblica" },
-      "author": "La Repubblica",
-      "title": "Bnl, addebiti multipli sui conti correnti. La banca: “Stiamo risolvendo”",
-      "description": "Diversi clienti hanno registrato spese ripetute sul proprio saldo. Ma l’istituto rassicura: “Tutti gli addebiti verranno stornati”",
-      "url": "https://www.repubblica.it/economia/2024/03/30/news/bnl_problemi_oggi-422400103/",
-      "urlToImage": "https://www.repstatic.it/content/nazionale/img/2024/03/30/110846498-73a464ba-6d35-4bd1-bc31-5d82a31748d5.jpg",
-      "publishedAt": "2024-03-30T10:08:49Z",
-      "content": "MILANO Vigilia di Pasqua turbolenta per i clienti Bnl, la banca del gruppo Bnp Paribas. Molti di loro questa mattina si sono ritrovati addebiti multipli sul conto corrente, con il risultato di vedere… [+1221 chars]"
-    },
-    {
-      "source": { "id": "fox-news", "name": "Fox News" },
-      "author": "Louis Casiano",
-      "title": "United flight diverted due to medical emergency, multiple passengers treated",
-      "description": "A United Airlines flight was diverted to upstate New York because of high winds at its destination, Newark, New Jersey, the airline said.",
-      "url": "https://www.foxnews.com/us/united-flight-diverted-medical-emergency-multiple-passengers-treated",
-      "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2024/03/Windsor-EMS-2.jpg",
-      "publishedAt": "2024-03-30T01:50:57Z",
-      "content": "Join Fox News for access to this content\r\nPlus special access to select articles and other premium content with your account - free of charge.\r\nPlease enter a valid email address.\r\nBy entering your e… [+1570 chars]"
-    },
-    {
-      "source": { "id": "fox-news", "name": "Fox News" },
-      "author": "Alexander Hall",
-      "title": "Michael Rapaport skewers The Squad as 'dangerous' 'race hustlers:' 'Totally full of s---'",
-      "description": "Actor Michael Rapaport explained in an interview that multiple political problems have soured his view on the Democratic Party and made him lean towards voting for Trump.",
-      "url": "https://www.foxnews.com/media/michael-rapaport-skewers-squad-dangerous-race-hustlers-totally-full-s",
-      "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2024/03/Michael-rapaport-interview.png",
-      "publishedAt": "2024-03-30T00:45:34Z",
-      "content": "Comedian and pro-Israel advocate Michael Rapaport shredded what the modern Democratic Party has become and explained why he is increasingly considering voting for Trump in a new interview.\r\nAs part o… [+2994 chars]"
-    },
-    {
-      "source": { "id": "la-repubblica", "name": "La Repubblica" },
-      "author": "La Repubblica",
-      "title": "Metropolis Files/13 - Diplomifici d'Italia. Dall'ex parà Bandecchi al miliardario Iervolino. Ecco la fabbrica delle lauree facili",
-      "description": "Le undici università telematiche italiane. Da Cepu a Multiversity passando per le scuole di Forza Italia e la laurea del ministro Lollobrigida. In queste settimane si decide il loro futuro. di Corrado Zunino e Carlo Bonini riprese di Daniele Cáceres, Luciano …",
-      "url": "https://video.repubblica.it/metropolis/metropolis-files13-diplomifici-d-italia-dall-ex-para-bandecchi-al-miliardario-iervolino-ecco-la-fabbrica-delle-lauree-facili/465937/466893",
-      "urlToImage": "https://www.repstatic.it/video/photo/2024/03/29/946879/946879-thumb-full-720-290324metfilespt13riex.jpg",
-      "publishedAt": "2024-03-29T19:12:27Z",
-      "content": null
-    },
-    {
-      "source": { "id": "abc-news-au", "name": "ABC News (AU)" },
-      "author": "Amanda Shalala",
-      "title": "Para-rower Nikki Ayers embraces gold medal favouritism for Paris Paralympics",
-      "description": "Nikki Ayers wanted to play for the Australian women's rugby union team, but when a serious knee injury, and multiple surgeries ended that career, she switched to para-rowing, and is now the world's best.",
-      "url": "https://www.abc.net.au/news/2024-03-30/nikki-ayers-para-rowing-paris-paralympics-olympics/103638978",
-      "urlToImage": "https://live-production.wcms.abc-cdn.net.au/68a06ccf0ed72b5f17e052a411b67496?impolicy=wcms_watermark_news&cropH=741&cropW=1318&xPos=0&yPos=0&width=862&height=485&imformat=generic",
-      "publishedAt": "2024-03-29T19:02:23Z",
-      "content": "<ul><li>In short: Nikki Ayers will team up with Jed Altschwager in the PR3 mixed double sculls at the Paris Paralympics. </li><li>Most members of the Paralympic and Olympic rowing team have been sele… [+4931 chars]"
-    },
-    {
-      "source": { "id": "medical-news-today", "name": "Medical News Today" },
-      "author": "Katharine Lang",
-      "title": "Household chemicals may increase risk of neurological conditions like autism, MS",
-      "description": "Two groups of chemicals in common household items may harm specialized cells in the brain, increasing the risk of neurological disorders like autism, and multiple sclerosis (MS), a new study finds.",
-      "url": "https://www.medicalnewstoday.com/articles/household-chemicals-may-increase-risk-neurological-conditions-autism-ms",
-      "urlToImage": "https://media.post.rvohealth.io/wp-content/uploads/sites/3/2024/03/household-chemicals-bottles-1200-628-facebook.jpg",
-      "publishedAt": "2024-03-28T11:00:00Z",
-      "content": "<ul><li>The prevalence of neurological and neurodevelopmental conditions has increased over the past decade.</li><li>Although some of this increase may be due to better diagnosis, experts suggest tha… [+7101 chars]"
-    },
-    {
-      "source": { "id": "the-next-web", "name": "The Next Web" },
-      "author": "Siôn Geschwindt",
-      "title": "Mobility giant Bolt adopts self-driving Starship robots for food delivery",
-      "description": "Bolt plans to roll out thousands of the robots across multiple countries, starting in its home city of Tallinn later this year.",
-      "url": "http://thenextweb.com/news/mobility-giant-bolt-adopts-self-driving-starship-robots-for-food-delivery",
-      "urlToImage": "https://img-cdn.tnwcdn.com/image/tnw-blurple?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2023%2F06%2Fbolt-starship-robot-delivery.jpg&signature=c902ce701ce95e20f6fd703a50ad52ca",
-      "publishedAt": "2023-06-22T09:17:15Z",
-      "content": "European ride-hailing firm Bolt will start using self-driving robots to deliver customers food as part of a new partnership with fellow Estonian company Starship Technologies, announced yesterday.  \r… [+2447 chars]"
-    },
-    {
-      "source": { "id": "the-globe-and-mail", "name": "The Globe And Mail" },
-      "author": "Molly Hayes",
-      "title": "OPP officers provide testimony at inquest into 2015 triple murders",
-      "description": "Four OPP officers addressed difficulties they had while discovering three deaths in 2015 connected by intimate partner violence",
-      "url": "https://www.theglobeandmail.com/canada/article-opp-provide-testimony-at-inquest-into-2015-triple-murders/",
-      "urlToImage": "https://www.theglobeandmail.com/resizer/B_0AHIFyolFcOl24Dt2Q82GJ_f4=/1200x800/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/tgam/BPRCBGA52VCDHGHL2GMDLH2QSA.JPG",
-      "publishedAt": "2022-06-16T01:18:17Z",
-      "content": "A real estate billboard of slain Anastasia Kuzyk along Highway 60 in Wilno, Ont., in 2015.Dave Chan/The Globe and Mail\r\nAs soon as she heard Anastasia Kuzyks address read out over her police radio on… [+4544 chars]"
-    },
-    {
-      "source": { "id": "nfl-news", "name": "NFL News" },
-      "author": null,
-      "title": "NFL injury updates, latest league news from Thursday, Jan. 20",
-      "description": "The Tampa Bay Buccaneers saw multiple offensive starters participate in practice Thursday, but are still waiting on their right tackle to get back on the field. Also, the latest NFL roster and injury news from Thursday.",
-      "url": "https://www.nfl.com/news/nfl-injury-updates-latest-league-news-from-thursday-jan-20",
-      "urlToImage": "https://static.www.nfl.com/image/private/t_editorial_landscape_12_desktop/league/nu2ombmssrq178clieou",
-      "publishedAt": "2022-01-20T19:22:41.693224Z",
-      "content": "The Tampa Bay Buccaneers saw multiple offensive starters participate in practice Thursday, but are still waiting on their right tackle to get back on the field.\r\nBuccaneers center Ryan Jensen and run… [+496 chars]"
-    },
-    {
-      "source": { "id": "the-hindu", "name": "The Hindu" },
-      "author": "The Hindu",
-      "title": "Limits of cooperation: On reforms in cooperative sector",
-      "description": "Reforms in cooperative sector should not be at the cost of federal principles",
-      "url": "https://www.thehindu.com/opinion/editorial/limits-of-cooperation-the-hindu-editorial-on-reforms-in-cooperative-sector/article35478339.ece",
-      "urlToImage": "https://www.thehindu.com/static/theme/default/base/img/og-image.jpg",
-      "publishedAt": "2021-07-22T18:32:00Z",
-      "content": "The cooperative movement certainly needs reform and revitalisation. Beset by political interference, many cooperative societies do not hold elections regularly, while some are superseded frequently. … [+2692 chars]"
-    },
-    {
-      "source": { "id": "the-times-of-india", "name": "The Times of India" },
-      "author": "Times Of India",
-      "title": "PBKS vs MI Live Score, IPL 2021: Mumbai Indians seek consistency; Punjab Kings eye return to winning ways",
-      "description": "IPL Live Score: Mumbai Indians seek consistency; Punjab Kings eye return to winning ways. Stay with TOI to get IPL live score, playing 11, scorecard, highlights and ball by ball score updates of the 17th IPL match between Punjab Kings and Mumbai Indians.",
-      "url": "http://timesofindia.indiatimes.com/sports/cricket/ipl/live-blog/punjab-kings-vs-mumbai-indians-pbks-vs-mi-live-score-ipl-2021-17th-match-chennai/liveblog/82214950.cms",
-      "urlToImage": "https://static.toiimg.com/thumb/msid-82214950,width-1070,height-580,imgsize-157009,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
-      "publishedAt": "2021-04-23T05:44:49Z",
-      "content": "Ravi Bishnoi return on the cards?\r\nDeepak Hooda showed what he is capable of, but greater consistency would be needed from him if the team has to prosper. They bet on Australian pace imports Jhye Ric… [+3131 chars]"
-    }
-  ]
+  
   constructor (){
     super();
     console.log("Hello I am constructor from news ")
     this.state={
-    articles:this.articles,
+    articles:[],
     loading:false
     }
+  }
+   async componentDidMount(){
+    let url="https://newsapi.org/v2/top-headlines?country=in&apiKey=e50468325df74c05bf409738298163cb";
+    let data= await fetch(url);
+    let parseData=await data.json();
+    this.setState({articles:parseData.articles})
   }
   render() {
     return (
@@ -142,7 +27,7 @@ export class News extends Component {
         {this.state.articles.map((element)=>
         { 
          return <div className="col-md-4" key={element.url} >
-        <NewsItem  title={element.title} description={element.description.slice(0,88)} imageUrl={element.urlToImage} url={element.url} />
+        <NewsItem  title={element.title} description={element.description} imageUrl={element.urlToImage} url={element.url} />
         </div>
         })}
        
